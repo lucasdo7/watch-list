@@ -2,11 +2,15 @@
   <h1> <%= @list.name %> </h1>
 
   <ul>
-    <% @list.movies.each do |list| %>
+    <% @list.movies.each do |movie| %>
       <li>
-    <%= list.title %>
+        <%= movie.title %>
+          <% movie.bookmarks.each do |mb|%>
+              <%= mb.comment %>
+          <% end %>
       </li>
     <% end %>
+
   </ul>
 
   <%= link_to 'Back', root_path, class: 'btn btn-danger btn-sm' %>
