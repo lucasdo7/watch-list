@@ -1,1 +1,13 @@
-<h1>all lists</h1>
+<div class="container mt-3">
+  <h1>all lists</h1>
+
+  <ul>
+  <% @lists.each do |list| %>
+  <li>
+    <%= link_to list.name, list_path(list) %>
+  </li>
+  <% end %>
+  </ul>
+
+  <%= link_to "Create a List", new_list_path, class: 'btn btn-primary' %>
+</div>

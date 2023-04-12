@@ -1,5 +1,7 @@
 class ListsController < ApplicationController
 
+  # @movie = Movie.find(params[:id])
+
   def index
     @lists = List.all
   end

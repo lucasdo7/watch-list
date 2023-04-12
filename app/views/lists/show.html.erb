@@ -1,1 +1,13 @@
-<h1> one list</h1>
+<div class="container">
+
+
+  <ul>
+    <% @list.movies.each do |list| %>
+      <li>
+    <%= list.title %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'Back', root_path, class: 'btn btn-danger btn-sm' %>
+</div>

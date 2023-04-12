@@ -1,15 +1,10 @@
-<h1>create list</h1>
-
 <div class="container mt-3">
-  <h1>Create a Movie</h1>
-  <%= simple_form_for @movie do |m| %>
+  <h1>Create a list</h1>
+  <%= simple_form_for @list do |m| %>
     <%= m.error_notification %>
     <%= m.error_notification message: m.object.errors[:base].to_sentence if m.object.errors[:base].present? %>
 
-    <%= m.input :title, placeholder: 'type your movie title' %>
-    <%= m.input :overview, label: 'um resumo' %>
-    <%= m.input :poster_url, hint: 'must be a link' %>
-    <%= m.input :rating, collection: 1..5, selected: 1  %>
+    <%= m.input :name, placeholder: 'type your list name' %>
 
     <%= m.button :submit, class: 'btn btn-success btn-sm' %>
   <% end %>
