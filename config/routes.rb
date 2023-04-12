@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   root "movies#index"
 
   resources :movies, only: %i[index show create new]
+
+  resources :lists, only: %i[index show create new]
 end
